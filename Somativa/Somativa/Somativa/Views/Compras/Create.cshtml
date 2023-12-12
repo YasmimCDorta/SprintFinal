@@ -1,0 +1,38 @@
+﻿@model Somativa.Models.Compra
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container" style="background-color:#FF8080; width:500px; align-items:center;border-radius:50px;margin-top:30px;margin-bottom:60px;">
+    <br />
+    <h3 class="text-center">Criar</h3>
+    <div>
+        <div class="container p-4">
+
+            <form asp-action="Create" style="align-content:center;">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nota" class="control-label"></label>
+                <input asp-for="Nota" class="form-control" />
+                <span asp-validation-for="Nota" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataHora" class="control-label"></label>
+                <input asp-for="DataHora" class="form-control" />
+                <span asp-validation-for="DataHora" class="text-danger"></span>
+            </div>
+                <div class="align-content-center" style="justify-content:space-between; margin-left:120px; margin-top:30px;">
+                    <input type="submit" value="Create" class="btn btn-outline-dark " style="background-color:#FF3131;" />
+                    <a asp-action="Index" class="btn btn-outline-dark " style="background-color:burlywood;">Voltar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

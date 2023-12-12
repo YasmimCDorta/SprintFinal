@@ -1,0 +1,31 @@
+﻿@model Somativa.Models.Compra
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container" style="background-color:#FF8080; width:500px; align-items:center;border-radius:50px;margin-top:30px;margin-bottom:60px;">
+    <br />
+    <div class="text-center">
+    <dl class="row">
+        <dt class="col-sm-5">
+            @Html.DisplayNameFor(model => model.Nota)
+        </dt>
+        <dd class="col-sm-7">
+            @Html.DisplayFor(model => model.Nota)
+        </dd>
+        <dt class="col-sm-5">
+            @Html.DisplayNameFor(model => model.DataHora)
+        </dt>
+        <dd class="col-sm-7">
+            @Html.DisplayFor(model => model.DataHora)
+        </dd>
+    </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model?.CompraId" class="btn btn-outline-dark  " style="background-color:#FF3131;">Editar</a>
+        <a asp-action="Index" class="btn btn-outline-dark "  style="background-color:burlywood;">Voltar</a>
+    </div>
+    <br />
+</div>
+</div>

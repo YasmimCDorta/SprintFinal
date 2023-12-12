@@ -1,0 +1,58 @@
+﻿@model Somativa.Models.CompraItem
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="container py-3">
+
+    <div class="alert alert-warning alert-dismissible fade show">
+
+        <h4 class="alert-heading">Realmente deseja apagar está compra?</h4>
+
+        <p>Esta ação é permanente!</p>
+
+        <button class="btn-close" data-bs-dismiss="alert"></button>
+
+    </div>
+</div>
+<div class="container" style="background-color:#FF8080; width:500px; align-items:center;border-radius:50px;margin-top:30px;margin-bottom:60px;">
+    <br />
+    <div>
+        <div class="container p-5 text-center">
+    <dl class="row">
+        <dt class = "col-sm-5">
+            @Html.DisplayNameFor(model => model.Compra)
+        </dt>
+        <dd class = "col-sm-7">
+            @Html.DisplayFor(model => model.Compra.CompraId)
+        </dd>
+        <dt class = "col-sm-5">
+            @Html.DisplayNameFor(model => model.Produto)
+        </dt>
+        <dd class = "col-sm-7">
+            @Html.DisplayFor(model => model.Produto.ProdutoId)
+        </dd>
+        <dt class = "col-sm-5">
+            @Html.DisplayNameFor(model => model.Quantidade)
+        </dt>
+        <dd class = "col-sm-7">
+            @Html.DisplayFor(model => model.Quantidade)
+        </dd>
+        <dt class = "col-sm-5">
+            @Html.DisplayNameFor(model => model.Unitario)
+        </dt>
+        <dd class = "col-sm-7">
+            @Html.DisplayFor(model => model.Unitario)
+        </dd>
+    </dl>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="CompraItemId" />
+                <input type="submit" value="Delete" class="btn btn-outline-dark " style="background-color:#FF3131;" />
+                <a asp-action="Index" class="btn btn-outline-dark " asp-route-id="@ViewBag.CompraId" style="background-color:burlywood;">Voltar</a>
+            </form>
+        </div>
+    </div>
+</div>
+        

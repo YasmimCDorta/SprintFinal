@@ -1,0 +1,38 @@
+﻿@model Somativa.Models.Fornecedor
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container" style="background-color:#FFDA55; width:500px; align-items:center;border-radius:50px;margin-top:30px;margin-bottom:60px;">
+    <br />
+    <h3 class="text-center">Criar</h3>
+    <div>
+        <div class="container p-5">
+            <form asp-action="Create" style="align-content:center;">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Nome" class="control-label"></label>
+                    <input asp-for="Nome" class="form-control" />
+                    <span asp-validation-for="Nome" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Cnpj" class="control-label"></label>
+                    <input asp-for="Cnpj" class="form-control" />
+                    <span asp-validation-for="Cnpj" class="text-danger"></span>
+                </div>
+                <div class="text-center " style="margin-top:10px;" >
+                    <input type="submit" value="Criar" class="btn btn-outline-dark col col-4" style="background-color:#FFDA90;" />
+                    <a asp-action="Index" class="btn btn-outline-dark col col-4" style="background-color:burlywood;">Voltar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

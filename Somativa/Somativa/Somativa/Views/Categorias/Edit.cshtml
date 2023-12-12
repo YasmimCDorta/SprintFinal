@@ -1,0 +1,33 @@
+﻿@model Somativa.Models.Categoria
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container" style="background-color:#D6B6F6; width:500px; margin-top:30px; align-items:center;border-radius:50px;">
+    <br />
+    <h3 class="text-center">Editar</h3>
+    <div>
+        <div class="container p-5">
+            <form asp-action="Edit" style="align-content:center;">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="CategoriaId" />
+                <div class="form-group">
+                    <label asp-for="Nome" class="control-label"></label>
+                    <input asp-for="Nome" class="form-control" />
+                    <span asp-validation-for="Nome" class="text-danger"></span>
+                </div>
+                <div class="text-center" style="margin-top:15px;">
+                    <input type="submit" value="Save" class="btn btn-outline-dark col col-4" style="background-color:#8454B4;" />
+                    <a asp-action="Index" class="btn btn-outline-dark col col-4" style="background-color:burlywood;">Voltar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Somativa</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Somativa.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm " style="background-color:#0090B0;">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img class="d-block col col-12 col-lg-12 col-md-12" src="~/img/Book Club (2).png" style="height:100px" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <partial name="_LoginPartial" />
+            </div>
+        </nav>
+
+        <nav class="navbar navbar-expand-sm  " style="background-color:#008293;">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><svg bootstrap-icon="List" class="text-dark d-block d-sm-flex " width="30" height="30"></svg></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between ">
+                    <ul class="navbar-nav flex-grow-1 ">
+                        <li class="nav-item">
+                            <a class="nav-link text-light " asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Clientes" asp-action="Index">Clientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Fornecedores" asp-action="Index">Fornecedores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Categorias" asp-action="Index">Categorias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Produtos" asp-action="Index">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Vendas" asp-action="Index">Vendas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Compras" asp-action="Index">Compras</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Relatórios
+                            </a>
+                            <ul class="dropdown-menu me-4">
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Relatorio" asp-action="RelatProd">Produtos</a></li>
+                                <li><a class="dropdown-item" asp-area="" asp-controller="Relatorio" asp-action="RelatMov">Movimentações</a></li>
+                            </ul>
+                        </li>
+                       <!-- <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Relatorio" asp-action="RelatProd">Relatórios</a>
+                        </li>
+                         <li class="nav-item">
+                             <a class="nav-link text-dark" asp-area="" asp-controller="Relatorio" asp-action="RelatMov">Relatório de movimentações</a>
+                         </li>-->
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="carousel slide carousel-dark " data-bs-touch="false" id="slider3" data-bs-ride="carousel">
+        <div class="carousel-inner " >
+            <div class="carousel-item active" data-bs-interval="2000">
+                <img class="d-block w-100" src="~/img/1.png" />
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img class="d-block w-100" src="~/img/2.png" />
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img class="d-block w-100" src="~/img/3.png" />
+            </div>
+        </div>
+</div>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <footer class="border-top footer text-light text-center " style="background-color:#0090B0; height:40px;">
+        <div class="container">
+            &copy; 2023 - Anti-Social Book Club
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿@model Somativa.Models.Produto
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container align-items-center" style="background-color:#245B55; width:500px; align-items:center;border-radius:50px; margin-top:30px;">
+    <br />
+    <div>
+        <h3 class="text-center text-white">Detalhes</h3>
+        <div class="container text-white p-5">
+            <dl class="row">
+                <dt class="col-sm-5">
+                    @Html.DisplayNameFor(model => model.Nome)
+                </dt>
+                <dd class="col-sm-7">
+                    @Html.DisplayFor(model => model.Nome)
+                </dd>
+                <dt class="col-sm-5">
+                    @Html.DisplayNameFor(model => model.Estoque)
+                </dt>
+                <dd class="col-sm-7">
+                    @Html.DisplayFor(model => model.Estoque)
+                </dd>
+                <dt class="col-sm-5">
+                    @Html.DisplayNameFor(model => model.Preco)
+                </dt>
+                <dd class="col-sm-7">
+                    @Html.DisplayFor(model => model.Preco)
+                </dd>
+                <dt class="col-sm-5">
+                    @Html.DisplayNameFor(model => model.Categoria)
+                </dt>
+                <dd class="col-sm-7">
+                    @Html.DisplayFor(model => model.Categoria.Nome)
+                </dd>
+                <dt class="col-sm-5">
+                    @Html.DisplayNameFor(model => model.Fornecedor)
+                </dt>
+                <dd class="col-sm-7">
+                    @Html.DisplayFor(model => model.Fornecedor.Nome)
+                </dd>
+            </dl>
+            <div class="align-content-center" style="justify-content:space-between; margin-left:120px; margin-top:15px;">
+                <a asp-action="Edit" asp-route-id="@Model?.ProdutoId" class="btn btn-outline-dark " style="background-color:#408980;">Editar</a>
+
+
+
+                <a asp-action="Index" class="btn btn-outline-dark " style="background-color:burlywood;">Voltar</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>

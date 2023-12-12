@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Somativa.Models.Produto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h1 class="my-2">Produtos</h1>
+
+<p>
+    <a asp-action="Create" class="btn" style="background-color:#FF0091 ;">Criar</a>
+</p>
+<div class="row">
+@foreach (var item in Model)
+     {
+         <div class="col">
+    <div class="card col-4 my-3 border border-1 border-dark mx-auto"  style=" background-color:#83b6c5; height:250px; width:200px;  ">
+    <div class="row">
+        <div class="info text-center my-2">
+        <h5 class="nome p-2" >@Html.DisplayFor(modelItem => item.Nome)</h5>
+        <div class="preco p-2">R$ @Html.DisplayFor(modelItem => item.Preco)</div>
+        <div class="categoria p-2">Categoria: @Html.DisplayFor(modelItem => item.Categoria.Nome)</div>
+        <div class="fornecedor p-1">Fornecedor: @Html.DisplayFor(modelItem => item.Fornecedor.Nome)</div>
+        </div>
+    </div>
+
+
+        <div class=" footer p-2 mx-auto ">
+                    <a asp-action="Edit" asp-route-id="@item.ProdutoId" class="p-2 " style="background-color:#FF0091; border-radius:5px;"><svg bootstrap-icon="PencilSquare" class="text-dark " width="20" height="20"></svg></a>
+                    <a asp-action="Details" asp-route-id="@item.ProdutoId" class=" p-2" style="background-color:#FF0091; border-radius:5px;"><svg bootstrap-icon="ZoomIn" width="20" height="20" class=" text-dark "></svg></a>
+                    <a asp-action="Delete" asp-route-id="@item.ProdutoId" class="p-2" style="background-color:#FF0091; border-radius:5px;"><svg bootstrap-icon="Trash" width="20" height="20" class=" text-dark "></svg></a>
+    </div>
+</div>
+        </div>
+ }
+</div>

@@ -1,0 +1,81 @@
+﻿@model Somativa.Models.Cliente
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+
+<div class="container py-3">
+
+    <div class="alert alert-warning alert-dismissible fade show">
+
+        <h4 class="alert-heading">Realmente deseja apagar este cliente?</h4>
+
+        <p>Esta ação é permanente!</p>
+
+        <button class="btn-close" data-bs-dismiss="alert"></button>
+
+
+
+    </div>
+</div>
+<div class="container" style="background-color:#FF0091; width:500px; align-items:center;border-radius:50px; margin-top:20px;">
+    <br />
+    <div>
+
+        <div class="container p-5">
+            <div class="row">
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Nome)
+                </dt>
+                <dd class="col-sm-10 ms-1">
+                    @Html.DisplayFor(model => model.Nome)
+                </dd>
+                <dt class="col-sm-3 ">
+                    @Html.DisplayNameFor(model => model.Endereco)
+                </dt>
+                <dd class="col-sm-10 ms-1">
+                    @Html.DisplayFor(model => model.Endereco)
+                </dd>
+                <dt class="col-sm-3 ">
+                    @Html.DisplayNameFor(model => model.Telefone)
+                </dt>
+                <dd class="col-sm-10 ms-1">
+                    @Html.DisplayFor(model => model.Telefone)
+                </dd>
+                <dt class="col-sm-3 ">
+                    @Html.DisplayNameFor(model => model.Cpf)
+                </dt>
+                <dd class="col-sm-10  ms-1">
+                    @Html.DisplayFor(model => model.Cpf)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+                <dd class="col-sm-10 ms-1">
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Nascimento)
+                </dt>
+                <dd class="col-sm-10 ms-1">
+                    @Html.DisplayFor(model => model.Nascimento)
+                </dd>
+                <div class="align-content-center" style="justify-content:space-between; margin-left:120px;">
+
+
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="ClienteId" />
+                        <input type="submit" value="Delete" class="btn btn-outline-dark " style="background-color:#FF5DC8;" />
+                        <a asp-action="Index" class="btn btn-outline-dark " style="background-color:burlywood;">Voltar</a>
+                    </form>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

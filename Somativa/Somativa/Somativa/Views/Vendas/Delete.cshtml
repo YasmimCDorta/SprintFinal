@@ -1,0 +1,57 @@
+﻿@model Somativa.Models.Venda
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="container py-3">
+
+    <div class="alert alert-warning alert-dismissible fade show">
+
+        <h4 class="alert-heading">Realmente deseja apagar este cliente?</h4>
+
+        <p>Esta ação é permanente!</p>
+
+        <button class="btn-close" data-bs-dismiss="alert"></button>
+
+
+
+    </div>
+</div>
+<div class="container" style="background-color:#A2DCF6; width:500px; align-items:center;border-radius:50px; margin-top:10px;">
+    <br />
+    <div>
+        <div class="container p-5">
+            <dl class="row">
+                <dt class="col-sm-5">
+                    @Html.DisplayNameFor(model => model.Nota)
+                </dt>
+                <dd class="col-sm-7">
+                    @Html.DisplayFor(model => model.Nota)
+                </dd>
+                <dt class="col-sm-5 ">
+                    @Html.DisplayNameFor(model => model.Cliente)
+                </dt>
+                <dd class="col-sm-7">
+                    @Html.DisplayFor(model => model.Cliente.Nome)
+                </dd>
+                <dt class="col-sm-5 ">
+                    @Html.DisplayNameFor(model => model.DataHora)
+                </dt>
+
+                <dd class="col-sm-7">
+                    @Html.DisplayFor(model => model.DataHora)
+                </dd>
+
+            </dl>
+
+            <div class="align-content-center" style="justify-content:space-between; margin-left:120px; margin-top:15px;">
+                <form asp-action="Delete">
+                    <input type="hidden" asp-for="VendaId" />
+                    <input type="submit" value="Delete" class="btn btn-outline-dark " style="background-color:#46AFDE;" />
+                    <a asp-action="Index" class="btn btn-outline-dark " style="background-color:burlywood;">Voltar</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

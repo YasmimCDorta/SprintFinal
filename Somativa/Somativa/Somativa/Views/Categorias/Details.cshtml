@@ -1,0 +1,31 @@
+﻿@model Somativa.Models.Categoria
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container align-items-center" style="background-color:#D6B6F6; width:500px; align-items:center;border-radius:50px; margin-top:30px;">
+    <br />
+    <div>
+        <h3 class="text-center">Detalhes</h3>
+        <div class="container p-5">
+            <dl class="row">
+                <dt class="col-sm-5">
+                    @Html.DisplayNameFor(model => model.Nome)
+                </dt>
+                <dd class="col-sm-7">
+                    @Html.DisplayFor(model => model.Nome)
+                </dd>
+            </dl>
+
+            <div class="align-content-center" style="justify-content:space-between; margin-left:120px; margin-top:15px;">
+                <a asp-action="Edit" asp-route-id="@Model?.CategoriaId" class="btn btn-outline-dark " style="background-color:#8454B4;">Editar</a>
+
+
+
+                <a asp-action="Index" class="btn btn-outline-dark " style="background-color:burlywood;">Voltar</a>
+
+            </div>
+        </div>
+    </div>
+</div>

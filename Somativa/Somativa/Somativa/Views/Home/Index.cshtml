@@ -1,0 +1,162 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Home.cshtml";
+
+}
+
+<div class="container">
+    <div class="my-4  text-center ">
+       <h2> Casais mais amados dos Livros - 2023 </h2>
+    </div>
+    <div class="row col text-center ">
+        <div class=" col-sm-2 col-md-2 col-lg-3 my-2">
+            <img class="text-center border border-2 border-dark p-2" style="height:250px; width:200px; border-start-end-radius:60px; border-bottom-left-radius:60px;" src="~/img/casal 1.jpg" />
+            <h5 class="text-center p-2  ">David & Alina</h5>
+        </div>
+
+        <div class=" col-sm-2 col-md-2 col-lg-3 my-2">
+            <img class="text-center   border border-2 border-dark p-2" style="height:250px; width:200px; border-start-end-radius:60px; border-bottom-left-radius:60px;" src="~/img/casa2.jpg" />
+            <h5 class="text-center p-2  ">Jacob & Joana</h5>
+
+    </div>
+        <div class=" col-sm-2 col-md-2 col-lg-3 my-2">
+            <img class="text-center  border border-2 border-dark p-2" style="height:250px; width:200px; border-start-end-radius:60px; border-bottom-left-radius:60px;" src="~/img/casal3.jpg" />
+            <h5 class="text-center p-2 ">Rhys & Freye</h5>
+    </div>
+        <div class=" col-sm-2 col-md-2 col-lg-3 my-2">
+            <img class="text-center  border border-2 border-dark p-2" style="height:250px; width:200px; border-start-end-radius:60px; border-bottom-left-radius:60px;" src="~/img/casal4.jpg" />
+            <h5 class="text-center p-2 ">Darvin & Elisabeth</h5>
+    </div>
+</div>
+</div>
+
+<div class="text-center container-fluid  mt-0">
+    <div class="my-4 fs-1 text-start d-lg-none d-md-none">
+        Livros que você pode se interessar
+    </div>
+
+<div class="my-4 fs-1 text-start d-none d-sm-block">
+            Livros que você pode se interessar
+</div>
+    <div class="container row  my-4 text-center">
+        <div class="card my-3 border border-2 border-dark d-lg-none d-md-none" style="width:180px; background-color:#83b6c5;  margin:auto;">
+            <p class="p-3"><img src="~/img/livro8.jpg" style="width:80px;" alt="Vbsa"></p>
+            <h5>Vermelho, Branco e Sangue Azul</h5>
+            <p class="price">R$48,90</p>
+            <p><a asp-area="" asp-controller="Produtos" asp-action="Index" style="text-decoration:none; color:white;">Veja mais livros do catálogo...</a></p>
+            <p><a class="btn  col-8" style="background-color:#FF0091;" asp-area=" " asp-controller="CompraItems" asp-action="Index">Comprar</a></p>
+        </div>
+          <div class="card my-3 border border-2 border-dark d-none d-sm-block" style="width:350px; background-color:#83b6c5;  margin:auto;">
+            <p class="p-3"><img src="~/img/livro8.jpg" style="width:200px;" alt="Vbsa"></p>
+            <h5>Vermelho, Branco e Sangue Azul</h5>
+            <p class="price">R$48,90</p>
+            <p><a asp-area="" asp-controller="Produtos" asp-action="Index" style="text-decoration:none; color:white;">Veja mais livros do catálogo...</a></p>
+            <p><a class="btn  col-8" style="background-color:#FF0091;" asp-area=" " asp-controller="CompraItems" asp-action="Index">Comprar</a></p>
+        </div>
+        <!------------------------------------------------------------->
+        <div class="card my-3 border border-2 border-dark d-lg-none d-md-none" style="width:180px; background-color:#83b6c5;  margin:auto;">
+            <p class="p-3"><img src="~/img/livro6.jpg" style="width:80px;" alt="Clh"></p>
+            <h5>Clube do livro dos homens</h5>
+            <p class="price">R$43,00</p>
+            <p><a asp-area="" asp-controller="Produtos" asp-action="Index" style="text-decoration:none;color:white;">Veja mais livros do catálogo...</a></p>
+            <p><a class="btn  col-8" style="background-color:#FF0091;" asp-area=" " asp-controller="CompraItems" asp-action="Index">Comprar</a></p>
+        </div>
+                <div class="card my-3 border border-2 border-dark d-none d-sm-block" style="width:350px; background-color:#83b6c5;  margin:auto;">
+            <p class="p-3"><img src="~/img/livro6.jpg" style="width:200px;" alt="Clh"></p>
+            <h5>Clube do livro dos homens</h5>
+            <p class="price">R$43,00</p>
+            <p><a asp-area="" asp-controller="Produtos" asp-action="Index" style="text-decoration:none;color:white;">Veja mais livros do catálogo...</a></p>
+            <p><a class="btn  col-8" style="background-color:#FF0091;" asp-area=" " asp-controller="CompraItems" asp-action="Index">Comprar</a></p>
+        </div>
+                <!------------------------------------------------------------->
+        <div class="card my-3 border border-2 border-dark d-lg-none d-md-none" style="width:180px; background-color:#83b6c5;  margin:auto;">
+            <p class="p-3"><img src="~/img/livro16.jpg" style="width:80px;" alt="7pc"></p>
+            <h5>7 Pecados Capitais</h5>
+            <p class="price">R$44,99</p>
+            <p><a asp-area="" asp-controller="Produtos" asp-action="Index" style="text-decoration:none;color:white;">Veja mais livros do catálogo...</a></p>
+            <p><a class="btn  col-8" style="background-color:#FF0091;" asp-area=" " asp-controller="CompraItems" asp-action="Index">Comprar</a></p>
+        </div>
+                <div class="card my-3 border border-2 border-dark d-none d-sm-block" style="width:350px; background-color:#83b6c5;  margin:auto;">
+            <p class="p-3"><img src="~/img/livro16.jpg" style="width:200px;" alt="7pc"></p>
+            <h5>7 Pecados Capitais</h5>
+            <p class="price">R$44,99</p>
+            <p><a asp-area="" asp-controller="Produtos" asp-action="Index" style="text-decoration:none;color:white;">Veja mais livros do catálogo...</a></p>
+            <p><a class="btn  col-8" style="background-color:#FF0091;" asp-area=" " asp-controller="CompraItems" asp-action="Index">Comprar</a></p>
+        </div>
+                <!------------------------------------------------------------->
+        <div class="card my-3 border border-2 border-dark d-lg-none d-md-none" style="width:180px; background-color:#83b6c5;  margin:auto;">
+            <p class="p-3"><img src="~/img/livro15.jpg" style="width:80px;" alt="pc"></p>
+            <h5>Principe Cruel</h5>
+            <p class="price">R$76,90</p>
+            <p><a asp-area="" asp-controller="Produtos" asp-action="Index" style="text-decoration:none;color:white;">Veja mais livros do catálogo...</a></p>
+            <p><a class="btn  col-8" style="background-color:#FF0091;" asp-area=" " asp-controller="CompraItems" asp-action="Index">Comprar</a></p>
+        </div>
+                <div class="card my-3 border border-2 border-dark d-none d-sm-block " style="width:350px; background-color:#83b6c5; margin:auto;">
+            <p class="p-3"><img src="~/img/livro15.jpg" style="width:200px;" alt="pc"></p>
+            <h5>Principe Cruel</h5>
+            <p class="price">R$76,90</p>
+            <p><a asp-area="" asp-controller="Produtos" asp-action="Index" style="text-decoration:none;color:white;">Veja mais livros do catálogo...</a></p>
+            <p><a class="btn  col-8" style="background-color:#FF0091;" asp-area=" " asp-controller="CompraItems" asp-action="Index">Comprar</a></p>
+        </div>
+         <!------------------------------------------------------------->
+        <div class="card my-3 border border-2 border-dark d-lg-none d-md-none" style="width:180px; background-color:#83b6c5;  margin:auto;">
+            <p class="p-3"><img src="~/img/livro14.jpg" style="width:80px;" alt="oep"></p>
+            <h5>Orgulho e Preconceito</h5>
+            <p class="price">R$70,00</p>
+            <p><a asp-area="" asp-controller="Produtos" asp-action="Index" style="text-decoration:none;color:white;">Veja mais livros do catálogo...</a></p>
+            <p><a class="btn  col-8" style="background-color:#FF0091;" asp-area=" " asp-controller="CompraItems" asp-action="Index">Comprar</a></p>
+        </div>
+                <div class="card my-3 border border-2 border-dark d-none d-sm-block" style="width:350px; background-color:#83b6c5; margin:auto;">
+            <p class="p-3"><img src="~/img/livro14.jpg" style="width:200px;" alt="oep"></p>
+            <h5>Orgulho e Preconceito</h5>
+            <p class="price">R$70,00</p>
+            <p><a asp-area="" asp-controller="Produtos" asp-action="Index" style="text-decoration:none;color:white;">Veja mais livros do catálogo...</a></p>
+            <p><a class="btn  col-8" style="background-color:#FF0091;" asp-area=" " asp-controller="CompraItems" asp-action="Index">Comprar</a></p>
+        </div>
+         <!------------------------------------------------------------->
+        <div class="card my-3 border border-2 border-dark d-md-none d-lg-none " style="width:180px; background-color:#83b6c5; margin:auto;">
+            <p class="p-3"><img src="~/img/livro13.jpg" style="width:80px;" alt="7pc"></p>
+            <h5>Super Onze</h5>
+            <p class="price">R$29,52</p>
+            <p><a asp-area="" asp-controller="Produtos" asp-action="Index" style="text-decoration:none;color:white; " class="my-2">Veja mais livros do catálogo...</a></p>
+            <p><a class="btn  col-8 " style="background-color:#FF0091; margin-top:18px;" asp-area=" " asp-controller="CompraItems" asp-action="Index">Comprar</a></p>
+        </div>
+                <div class="card my-3 border border-2 border-dark d-none d-sm-block" style="width:350px; background-color:#83b6c5;  margin:auto;">
+            <p class="p-3"><img src="~/img/livro13.jpg" style="width:200px;" alt="7pc"></p>
+            <h5>Super Onze</h5>
+            <p class="price">R$29,52</p>
+            <p><a asp-area="" asp-controller="Produtos" asp-action="Index" style="text-decoration:none;color:white;">Veja mais livros do catálogo...</a></p>
+            <p><a class="btn  col-8" style="background-color:#FF0091;" asp-area=" " asp-controller="CompraItems" asp-action="Index">Comprar</a></p>
+        </div>
+         <!------------------------------------------------------------->
+    </div>
+ 
+</div>
+
+<div class="container ">
+    <img src="~/img/Livraria Anti-Social Book Club.png" class="w-100 border border-2 border-dark d-lg-none d-md-none" style=" height:250px; border-start-end-radius:60px; border-bottom-left-radius:60px; border-bottom-left-radius:100px;">
+     <img src="~/img/Livraria Anti-Social Book Club.png" class="w-100 border border-2 border-dark d-none d-sm-block " style=" height:650px; border-start-end-radius:60px; border-bottom-left-radius:60px; border-bottom-left-radius:100px;">
+</div>
+
+<div class="container my-4 d-none d-sm-block">
+            <div class=" my-3 fs-1 text-center p-2 d-none d-sm-block ">
+        <h2 class="p-1">"Bem-Vindo(a) à Anti-Social Book Club - Onde os livros ganham vida!"</h2>
+    </div>
+    <div class="row col">
+        <div class="col-6 col-md-6 text-center d-none d-sm-block">
+            <img src="~/img/27eabb6631ca3e19efc07543541af122.jpg" class=" border border-2 border-dark p-2 " style=" height:650px; width:auto; border-start-end-radius:60px; border-bottom-left-radius:60px; border-bottom-left-radius:100px;" />
+        </div>
+        <div class="col-6  my-5  d-none d-sm-block ">
+            <h4>Na Anti-Social, nos dedicamos ao mundo encantador dos livros e ao incrível impacto que eles tem em nossas vidas. 
+                Com uma paixão pela literatura e o compromisso de proporcionar uma experiência de leitura excepcional, 
+                criamos um paraíso virtual para amantes de livros como você.</h4>
+            <h4>
+                A livraria Anti-Social oferece uma variedade de títulos, incluindo livros de todos os gêneros, desde ficção até não-ficção. 
+                Há também uma seção dedicada a livros infantis e juvenis, além de uma seção de livros técnicos e científicos. Além de ter um ambiente agradável e aconchegante, perfeito para os leitores. 
+                Tendo também um espaço dedicado ao café, onde os clientes podem relaxar e tomar uma bebida enquanto leem ou conversam. Aqui nos prezamos pela felicidade e apredizagem de nossos queridos leitores, 
+                por isso nós da Anti-Social Book Club decidimos criar esse App para que nossos clientes possam ler em qualquer lugar que estiverem!
+            </h4>
+        </div>
+    </div>
+
+    </div>

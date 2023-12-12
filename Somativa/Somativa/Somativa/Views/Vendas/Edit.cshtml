@@ -1,0 +1,43 @@
+﻿@model Somativa.Models.Venda
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container" style="background-color:#A2DCF6; width:500px; margin-top:30px; align-items:center;border-radius:50px;">
+    <br />
+    <h3 class="text-center">Editar</h3>
+    <div>
+        <div class="container p-5">
+            <form asp-action="Edit" style="align-content:center;">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="VendaId" />
+                <div class="form-group">
+                    <label asp-for="Nota" class="control-label"></label>
+                    <input asp-for="Nota" class="form-control" />
+                    <span asp-validation-for="Nota" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ClienteId" class="control-label"></label>
+                    <select asp-for="ClienteId" class="form-control" asp-items="ViewBag.ClienteId"></select>
+                    <span asp-validation-for="ClienteId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DataHora" class="control-label"></label>
+                    <input asp-for="DataHora" class="form-control" />
+                    <span asp-validation-for="DataHora" class="text-danger"></span>
+                </div>
+                <div class="align-content-center" style="justify-content:space-between; margin-left:120px; margin-top:15px;">
+                    <input type="submit" value="Save" class="btn btn-outline-dark " style="background-color:#46AFDE;" />
+                    <a asp-action="Index" class="btn btn-outline-dark " style="background-color:burlywood;">Voltar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

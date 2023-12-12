@@ -1,0 +1,50 @@
+﻿@model Somativa.Models.Produto
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container" style="background-color:#245B55; width:500px; align-items:center;border-radius:50px;margin-top:30px;margin-bottom:60px;">
+    <br />
+    <h3 class="text-center text-white">Criar</h3>
+    <div>
+        <div class="container p-5">
+            <form asp-action="Create" style="align-content:center;">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group text-white">
+                    <label asp-for="Nome" class="control-label"></label>
+                    <input asp-for="Nome" class="form-control" />
+                    <span asp-validation-for="Nome" class="text-danger"></span>
+                </div>
+                <div class="form-group text-white">
+                    <label asp-for="Estoque" class="control-label"></label>
+                    <input asp-for="Estoque" class="form-control" />
+                    <span asp-validation-for="Estoque" class="text-danger"></span>
+                </div>
+                <div class="form-group text-white">
+                    <label asp-for="Preco" class="control-label"></label>
+                    <input asp-for="Preco" type="number" step=".01" class="form-control" />
+                    <span asp-validation-for="Preco" class="text-danger"></span>
+                </div>
+                <div class="form-group text-white">
+                    <label asp-for="CategoriaId" class="control-label"></label>
+                    <select asp-for="CategoriaId" class="form-control" asp-items="ViewBag.CategoriaId"></select>
+                </div>
+                <div class="form-group text-white">
+                    <label asp-for="FornecedorId" class="control-label"></label>
+                    <select asp-for="FornecedorId" class="form-control" asp-items="ViewBag.FornecedorId"></select>
+                </div>
+                <div class="align-content-center" style="justify-content:space-between; margin-left:120px; margin-top:30px;">
+                    <input type="submit" value="Create" class="btn btn-outline-dark " style="background-color:#408980;" />
+                    <a asp-action="Index" class="btn btn-outline-dark " style="background-color:burlywood;">Voltar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

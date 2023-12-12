@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Somativa.Models.Fornecedor>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Fornecedores</h1>
+
+
+<p>
+    <a asp-action="Create" class="btn m-2" style="background-color:#F9BE26;">Criar</a>
+</p> 
+
+<table class="table table-striped table-hover" style="background-color:#FFEDAC; ">
+    <thead class="table =" style="background-color:#FFDA55; ">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cnpj)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cnpj)
+            </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.FornecedorId" class="p-2"> <svg bootstrap-icon="PencilSquare" class="text-dark " width="20" height="20"></svg></a>
+                    <a asp-action="Details" asp-route-id="@item.FornecedorId" class=" p-2"><svg bootstrap-icon="ZoomIn" width="20" height="20" class=" text-dark "></svg></a>
+                    <a asp-action="Delete" asp-route-id="@item.FornecedorId" class="p-2"><svg bootstrap-icon="Trash" width="20" height="20" class=" text-dark "></svg></a>
+                </td>
+        </tr>
+}
+    </tbody>
+</table>
